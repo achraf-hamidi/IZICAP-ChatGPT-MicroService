@@ -36,9 +36,10 @@ public class ChatGPTServices {
                 .POST(HttpRequest.BodyPublishers.ofString(requestBody))
                 .build();
 
+
         // Send the request and get the response
         HttpResponse<String> response = client.send(httpRequest, HttpResponse.BodyHandlers.ofString());
-
+        System.out.println(response);
         // Parse the response
         ChatResponse chatResponse = new Gson().fromJson(response.body(), ChatResponse.class);
 

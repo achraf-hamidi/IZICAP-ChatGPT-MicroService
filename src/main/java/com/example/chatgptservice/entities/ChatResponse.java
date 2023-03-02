@@ -24,7 +24,7 @@ public class ChatResponse {
     @Override
     public String toString() {
         return "{" +
-                "usage=" + usage.toString() +
+                "usage=" + this.usage +
                 ", choice=" + this.getfirst() +
                 '}';
     }
